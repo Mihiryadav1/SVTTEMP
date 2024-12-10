@@ -1,0 +1,102 @@
+<div class="box">
+    <h3>Transaction Details</h3>
+    <div class="">
+        <div class="flex">
+            <span class="data-heading"> Transaction ID</span>:
+            <span class="data-value"> {{tranctionDetails.txnId}}</span>
+        </div>
+        <div class="flex">
+            <span class="data-heading"> Customer Ref No</span>:
+            <span class="data-value"> {{tranctionDetails.custRefNo}}</span>
+        </div>
+    </div>
+    <div class="">
+        <div class="flex">
+            <span class="data-heading"> Date</span>:
+            <span class="data-value"> {{tranctionDetails.date | date :'MMM d, y, HH:mm:ss'}}</span>
+        </div>
+        <div class="flex">
+            <span class="data-heading">Type</span>:
+            <span class="data-value"> {{tranctionDetails.type}}</span>
+        </div>
+
+    </div>
+    <div class="">
+        <div class="flex">
+            <span class="data-heading">Amount</span>:
+            <span class="data-value"> {{tranctionDetails.amount}}</span>
+        </div>
+        <div class="flex">
+            <span class="data-heading">Currency Code</span>:
+            <span class="data-value"> {{tranctionDetails.currencyCode}}</span>
+        </div>
+    </div>
+    <div class="">
+        <div class="flex">
+            <span class="data-heading"> Status</span>:
+            <span class="data-value"> {{tranctionDetails.status}}</span>
+        </div>
+        <div class="flex">
+            <span class="data-heading">Display Message</span>:
+            <span class="data-value"> {{tranctionDetails.displayMessage}}</span>
+        </div>
+        <div class="flex">
+            <span class="data-heading">RC</span>:
+            <span class="data-value"> {{tranctionDetails.rc}}</span>
+        </div>
+        <div class="flex">
+            <span class="data-heading">Direction</span>:
+            <span class="data-value"> {{tranctionDetails.direction}}</span>
+        </div>
+    </div>
+</div>
+<mat-divider></mat-divider>
+<div class="box">
+    <h3>Payer Information</h3>
+
+    <div class="">
+        <div class="flex">
+            <span class="data-heading"> Payer Name</span>:
+            <span class="data-value"> {{tranctionDetails.payerName}}</span>
+        </div>
+        <div class="flex">
+            <span class="data-heading">Payer VPA</span>:
+            <span class="data-value"> {{tranctionDetails.payerVPA}}</span>
+        </div>
+    </div>
+    <div class="">
+
+        <div class="flex">
+            <span class="data-heading">Payer Wallet</span>:
+            <span class="data-value"> {{tranctionDetails.payerWallet}}</span>
+        </div>
+        <div class="flex"></div>
+    </div>
+</div>
+<mat-divider></mat-divider>
+<div class="box">
+    <h3>Payee Information</h3>
+
+    <div class="">
+        <div class="flex">
+            <span class="data-heading"> Payee Name</span>:
+            <span class="data-value"> {{tranctionDetails.payeeName}}</span>
+        </div>
+        <div class="flex">
+            <span class="data-heading">Payee VPA</span>:
+            <span class="data-value"> {{tranctionDetails.payeeVPA}}</span>
+        </div>
+    </div>
+    <div class="">
+
+        <div class="flex">
+            <span class="data-heading">Payee Wallet</span>:
+            <span class="data-value"> {{tranctionDetails.payeeWallet}}</span>
+        </div>
+    </div>
+</div>
+<mat-dialog-actions align="end">
+    <button *ngIf="isReqUptToken" mat-raised-button mat-dialog-close class="form-btn" (click)="reqUpdateToken()">Req
+        Update Token</button>
+    <button mat-raised-button mat-dialog-close class="btn-cancel">Cancel</button>
+</mat-dialog-actions>
